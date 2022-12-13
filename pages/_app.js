@@ -8,6 +8,8 @@ import ReactDOM from "react-dom";
 import PageChange from "/components/Mui/PageChange/PageChange.js";
 
 import "/styles/scss/nextjs-material-kit.scss?v=1.2.0";
+import { favicon, ogThemeColor, ogUrl } from "../lib/globalvars";
+import { ogDescription, ogImage } from './../lib/globalvars';
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -36,13 +38,12 @@ export default function App({ Component, pageProps }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-          <meta name="theme-color" content="#000000" />
-          <meta name="description" content="Horeca uitzendbedrijf waarbij kwaliteit voorop staat. Gespecialiseerd in barwerk, kroegen, bediening en keuken. Ideaal wanneer je een barman of ander personeel nodig hebt" />
-          <meta property="og:title" content="Regel hier jouw horeca-medewerker" />
-          <meta property="og:url" content="https://veldhuijzenhospitality.com" />
-          <meta property="og:image" content="https://veldhuijzenhospitality.com/VHF.jpg" />
+          <meta name="theme-color" content={ogThemeColor} />
+          <meta name="description" content={ogDescription} />
+          <meta property="og:url" content={ogUrl} />
+          <meta property="og:image" content={ogImage} />
           <meta property="og:type" content="website"/>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href={favicon} />
       </Head>
       <StoreProvider>
         <UserProvider>
