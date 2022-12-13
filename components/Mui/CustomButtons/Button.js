@@ -16,6 +16,7 @@ const makeComponentStyles = makeStyles(() => ({
   ...buttonStyle
 }));
 
+// eslint-disable-next-line react/display-name
 const RegularButton = React.forwardRef((props, ref) => {
   const {
     color,

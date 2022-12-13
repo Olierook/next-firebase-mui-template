@@ -7,7 +7,7 @@ const styles = {
   clearfix: {
     "&:after,&:before": {
       display: "table",
-      content: '" "',
+      content: "\" \"",
     },
     "&:after": {
       clear: "both",

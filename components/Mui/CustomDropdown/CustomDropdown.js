@@ -71,15 +71,15 @@ export default function CustomDropdown(props) {
   });
   let icon = null;
   switch (typeof buttonIcon) {
-    case "object":
-      icon = <props.buttonIcon className={classes.buttonIcon} />;
-      break;
-    case "string":
-      icon = <Icon className={classes.buttonIcon}>{props.buttonIcon}</Icon>;
-      break;
-    default:
-      icon = null;
-      break;
+  case "object":
+    icon = <props.buttonIcon className={classes.buttonIcon} />;
+    break;
+  case "string":
+    icon = <Icon className={classes.buttonIcon}>{props.buttonIcon}</Icon>;
+    break;
+  default:
+    icon = null;
+    break;
   }
   return (
     <div>
@@ -107,8 +107,8 @@ export default function CustomDropdown(props) {
               ? "top-start"
               : "top"
             : left
-            ? "bottom-start"
-            : "bottom"
+              ? "bottom-start"
+              : "bottom"
         }
         className={classNames({
           [classes.popperClose]: !anchorEl,

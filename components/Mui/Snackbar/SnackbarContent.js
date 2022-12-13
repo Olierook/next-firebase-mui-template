@@ -36,15 +36,15 @@ export default function SnackbarContent(props) {
   }
   let snackIcon = null;
   switch (typeof icon) {
-    case "object":
-      snackIcon = <props.icon className={classes.icon} />;
-      break;
-    case "string":
-      snackIcon = <Icon className={classes.icon}>{props.icon}</Icon>;
-      break;
-    default:
-      snackIcon = null;
-      break;
+  case "object":
+    snackIcon = <props.icon className={classes.icon} />;
+    break;
+  case "string":
+    snackIcon = <Icon className={classes.icon}>{props.icon}</Icon>;
+    break;
+  default:
+    snackIcon = null;
+    break;
   }
   const [alert, setAlert] = React.useState(
     <Snack
